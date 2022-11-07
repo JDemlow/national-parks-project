@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>National Parks</title>
+    <title>Explore Our National Parks</title>
   </head>
   <body>
     <div id="overlay"></div>
@@ -17,9 +17,11 @@
         <li><a href="#">Trip Ideas</a></li>
         <li><a href="#">Shop</a></li>
 
-        <li class="mobile-only"><a href="falcon9.html">Plan your visit</a></li>
         <li class="mobile-only">
-          <a href="falcon-heavy.html">Learn & Explore</a>
+          <a href="falcon-heavy.html">Plan your visit</a>
+        </li>
+        <li class="mobile-only">
+          <a href="parkfacts.html">Learn & Explore</a>
         </li>
         <li class="mobile-only"><a href="dragon.html">Get involved</a></li>
         <li class="mobile-only"><a href="#">Discover History</a></li>
@@ -29,18 +31,19 @@
       </ul>
     </div>
     <header class="main-header">
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/1/1d/US-NationalParkService-Logo.svg"
-            alt="National Parks Logo"
-          />
-        </a>
-      </div>
+        <div class="logo" id="fade">
+          <a href="index.html">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/1/1d/US-NationalParkService-Logo.svg"
+              alt="National Parks Logo"
+            />
+          </a>
+        </div>
+      
       <nav class="desktop-main-menu">
         <ul>
-          <li><a href="falcon9.html">Plan Your Visit</a></li>
-          <li><a href="falcon-heavy.html">Learn & Explore</a></li>
+          <li><a href="parkfacts.html">Learn & Explore</a></li>
+          <li><a href="falcon-heavy.html">Plan Your Visit</a></li>
           <li><a href="dragon.html">Get Involved</a></li>
           <li><a href="#">Discover History</a></li>
           <li><a href="#">Explore Nature</a></li>
@@ -67,11 +70,11 @@
         <div id="clicker">
           <a href="#" class="btn">
             <div class="hover"></div>
-            <span id="btn">Click Here</span>
+            <span id="btn">Find A Park</span>
           </a>
         </div>
       </div>
-      <div class="scroll-arrow">
+      <div class="scroll-arrow hidden">
         <svg width="30px" height="20px">
           <path
             stroke="#ffffff"
@@ -81,9 +84,10 @@
           ></path>
         </svg>
       </div>
+    </div>
     </section>
     <!-- Section B -->
-    <section class="section-b">
+    <section class="section-b hidden">
       <div class="section-inner">
         <h4 id="description">More Media</h4>
         <h2>Pictures and Video</h2>
