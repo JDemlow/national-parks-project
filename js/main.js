@@ -1,3 +1,7 @@
+// $(window).scroll(function () {
+//   $(".logo img").css("opacity", 1 - $(window).scrollTop() / 250);
+// });
+
 const btn = document.querySelector("#menu-btn");
 const overlay = document.querySelector("#overlay");
 const menu = document.querySelector("#mobile-menu");
@@ -59,6 +63,13 @@ function reset() {
 // fetch request
 
 document.querySelector("#clicker").addEventListener("click", runEvent);
+document.querySelector("#clicker").addEventListener("click", removeHidden);
+function removeHidden() {
+  const hiddenElement = document.querySelectorAll(".hidden");
+  hiddenElement.forEach((element) => {
+    element.classList.remove("hidden");
+  });
+}
 
 function runEvent() {
   let parkCode = [
@@ -190,3 +201,31 @@ function runEvent() {
       console.log(`Error ${err}`);
     });
 }
+
+// window.addEventListener("scroll", scrollHandler);
+
+// let fade = document.getElementById("fade");
+
+// function fadeOutOnScroll(element) {
+//   if (!element) {
+//     return;
+//   }
+
+//   let distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+//   let elementHeight = element.offsetHeight;
+//   let scrollTop = document.documentElement.scrollTop;
+
+//   let opacity = 1;
+
+//   if (scrollTop > distanceToTop) {
+//     opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+//   }
+
+//   if (opacity >= 0) {
+//     element.style.opacity = opacity;
+//   }
+// }
+
+// function scrollHandler() {
+//   fadeOutOnScroll(fade);
+// }
