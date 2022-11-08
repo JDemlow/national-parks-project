@@ -1,6 +1,8 @@
-// $(window).scroll(function () {
-//   $(".logo img").css("opacity", 1 - $(window).scrollTop() / 250);
-// });
+document.addEventListener("scroll", (event) => {
+  let scrollTop = window.scrollY;
+
+  document.getElementById("fade").style.opacity = 1 - scrollTop / 250;
+});
 
 const btn = document.querySelector("#menu-btn");
 const overlay = document.querySelector("#overlay");
@@ -201,31 +203,3 @@ function runEvent() {
       console.log(`Error ${err}`);
     });
 }
-
-// window.addEventListener("scroll", scrollHandler);
-
-// let fade = document.getElementById("fade");
-
-// function fadeOutOnScroll(element) {
-//   if (!element) {
-//     return;
-//   }
-
-//   let distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
-//   let elementHeight = element.offsetHeight;
-//   let scrollTop = document.documentElement.scrollTop;
-
-//   let opacity = 1;
-
-//   if (scrollTop > distanceToTop) {
-//     opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
-//   }
-
-//   if (opacity >= 0) {
-//     element.style.opacity = opacity;
-//   }
-// }
-
-// function scrollHandler() {
-//   fadeOutOnScroll(fade);
-// }
